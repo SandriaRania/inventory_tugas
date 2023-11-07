@@ -10,7 +10,8 @@ Widget MyApp sebagai basis dari seluruh aplikasi di tugas 7.
 Widget Shopcard berfungsi untuk menyimpan objek card-card.
 Widget MyHomePage berfungsi sebagai basis tampilan homepage.
 
-3. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)
+3. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial) \
+Jawaban: \
 Pertama, saya menginstall Flutter lalu membuat aplikasi baru bernama inventory_tugas, lalu dalam folder lib, saya membuat file baru menu.dart . Saya memindah class MyHomePage dan _MyHomePageState dari main.dart ke menumdart, lalu menambahkan import package agar main.dart terhubung dengan menu.dart .
 
 Selanjutnya di menu.dart saya mengubah MyHomePage menjadi stateless dengan merubah key dan StatefulWidget menjadi StatelessWidget. Selanjutnya, di luar class MyHomePage saya membuat class ShopCard sebagai basis card-card yang akan pakai, saat class telah dibuat baru saya menambah items yang diinginkan di dalam class MyHomePage, dan menambah properti-peopertinya seperti size dan color. Saat selesai, saya menjalankan programnya dengan menggunakan command flutter run. 
