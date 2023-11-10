@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inventory_tugas/menu.dart';
+import 'package:inventory_tugas/widgets/shop_card.dart';
 
 void main() {
   runApp(const MyApp());
