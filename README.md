@@ -1,3 +1,26 @@
+Tugas 9:
+1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Jawaban: Ya, kita bisa melakukan pengambilan data secara lamgsung tanpa mendeklarasikan model sebelumnha. Melakukan hal tersebut dan membuat model terlebih dahulu tidak mrmiliki perbedaan performa signifikan, melainkan tergantung keseluruhan struktur  projek dan kegunaan JSON tersebut.
+Sumber: https://stackoverflow.com/questions/58871732/should-i-use-json-objects-directly 
+
+2. Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+Jawaban: CookieRequest digunakan untuk mengambil data cookie pada session tersebut. Instance CookieRequest harus dibagikan ke seluruh aplikasi Flutter karena data tersebut berpengaruh akan dipakai untuk menampilkan informasi pengguna. 
+
+3. Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+Jawaban: Pertama kita mengambil data dari json dengan menggunakan method fromJson, lalu kita meambah dependensi http ke proyek untuk bertukar HTTP request, selanjutnya kita membuat model yang sesuai dengan data Json, lalu kita  membuat http request ke web service menggunakan dependensi http. Selanjutnya kita mengkonversikan objek yang didapatkan dari web service ke model. Terakhir kita menampilkan data yang telah dikonversi ke aplikasi dengan FutureBuilder.
+
+4. Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+Jawaban: Pertama kita membuat application authentication di Django yang menerima cookie session dan csrf authentication. Lalu kita membuat halaman login di views. Lalu dalam Flutter kita menambah Provider agar bisa menggunakan CookieRequesr agar tersambung dengan django sebelumnya. Selanjutnya kita membuat fungsi login di projek flutter yang akan tersambung kembali ke fungsi login django.
+
+5. Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+Jawaban: Scaffold sebagai basis tampilan visual Materiak Design, Text untuk menampilkan teks, ElevatedButton untuk menampilkan button, Column untuk mengatur anak widget dalam urutan kolom.
+Sumber: https://docs.flutter.dev/ui/widgets/basics
+
+6. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+Jawaban: Pertama saya membuat application autentikasi di projek django yang memanfaatkan corsheaders agar bisa menerima cookie session. Selanjutnya di projek flutfer saya membuat halaman login yang akan tersambung ke autentikasi django sebelumnya. Dengan CookieRequest akan disimpan informasi tentang item-item akun yang sebelumnya sudah di parse dalam bentuk json dan dibuat lagi modelnya di folder models di projek flutter. Data tersebut akan ditampilkan di halaman Lihat Item, yang dibuat di halaman list_item.dart di screens.
+
+
+
 Tugas 8: 
 
 1. Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat! \
